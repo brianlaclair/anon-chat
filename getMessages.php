@@ -17,7 +17,7 @@ if (isset($_POST['rm']) && isset($_POST['start'])) {
 		
 		$usercolor = stringToColorCode($dataArray['ip']);
 		
-		echo "<div class='messageholder' style='background-image: 	linear-gradient(to right, #adadad, #{$usercolor});'>[{$dataArray['timestamp']}] - {$dataArray['ip']} says...<br><div class='messagetext'>{$dataArray['text']}</div></div><br>";
+		echo "<div class='messageholder' style='background-image: 	linear-gradient(to right, #{$usercolor}, #000);'>{$dataArray['timestamp']}<br><div class='messagetext'>{$dataArray['text']}</div></div><br>";
 		$start++;
 		
 	}
