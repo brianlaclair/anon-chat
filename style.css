@@ -1,5 +1,7 @@
 html {
-	overflow-y:			hidden;
+	max-height:			100vh;
+	margin:				0px;
+	padding:			0px;
 }
 
 body {
@@ -7,6 +9,7 @@ body {
 	background-color: 	#000;
 	color:				#fff;
 	margin:				0px;
+	max-height:			100vh;
 }
 
 .topbar {
@@ -19,17 +22,21 @@ body {
 }
 
 h2 {
-	font-size:			100%;
+	margin-top:			0px;
+	font-size:			2.5vh;
 }
 
 .chatmessages {
 	position: 			absolute;
+	display:			flex;
+	flex-direction:		column;
 	width:				100%;
 	top:				5vh;
 	height:				85vh;
 	overflow-y:			scroll;
 	overflow-x:			hidden;
 	color:				#fff;
+	justify-content:	flex-end;
 }
 
 .chatbar {
@@ -38,8 +45,7 @@ h2 {
 	grid-template-columns:	90% 10%;
 	width:				100%;
 	bottom:				0px;
-	height:				10vh;
-	min-height:			100px;
+	height:				5vh;
 	background-color:	#fff;
 	margin:				0px;
 }
@@ -67,28 +73,40 @@ h2 {
 }
 
 .chatinput {
-	font-size:			50px;
-	height:				95%;
+	font-size:			2.5vh;
+	padding:			0px;
+	max-height:			5vh;
 	width:				100%;
+	border-width:		0px;
 }
 
 .chatlink {
 	margin:				0px;
 	padding:			0px;
 	width:				100%;
-	line-height: 		200%;
+	height:				100%;
 	display: 			block;
 	margin-left: 		auto;
 	margin-right: 		auto;
 	text-align: 		center;
-	font-size:			50px;
+	font-size:			2.5vh;
 	transition-duration: 0.5s;
+	overflow:			hidden;
 }
 
 .chatlink:hover {
-	font-size:			60px;
+	
 	cursor:				pointer;
 	background-color:   #000;
+	 text-shadow: -4px 4px #ef3550,
+               -8px 8px #f48fb1,
+               -12px 12px #7e57c2,
+               -16px 16px #2196f3,
+               -20px 20px #26c6da,
+               -24px 24px #43a047,
+               -28px 28px #eeff41,
+               -32px 32px #f9a825,
+               -36px 36px #ff5722;
 }
 
 .center {

@@ -3,10 +3,14 @@ require "eq.php";
 
 eq_start("style.css", "https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js");
 
+if (isset($_SERVER['QUERY_STRING'])) {
+	$room = explode("/", $_SERVER['QUERY_STRING'])[0];
+}
+
 $home  = true;
 $title = "AnonChat";
-if (isset($_GET['room'])) {
-	$title .= " - {$_GET['room']}";
+if ($room != "") {
+	$title .= " - {$room}";
 	$home	= false;
 }
 eq_title($title);
@@ -24,12 +28,12 @@ if (!$home) {
 		eq_link("!onclick=submit_input()", "⏩", "chatlink", false);
 	eq_div_end();
 
-	eq_script("var room = \"{$_GET['room']}\";");
+	eq_script("var room = \"{$room}\";");
 	eq_script("script.js");
 } else { 
 	eq_div("messageholder");
 		eq_text("Hey there!", "h1");
-		eq_text(["Welcome to anon-chat.", "You've landed on the homepage, so there's not much here at the moment.","That's okay though! There are an infinite number of chatrooms around this site.", "Why don't you head over to the " . eq_link("?room=Welcome", "Welcome") . " chatroom first?"], "p");
+		eq_text(["Welcome to anon-chat.", "You've landed on the homepage, so there's not much here at the moment.","That's okay though! There are an infinite number of chatrooms around this site.", "Why don't you head over to the " . eq_link("Welcome") . " chatroom first?"], "p");
 	eq_div_end();
 }
 eq_end();
