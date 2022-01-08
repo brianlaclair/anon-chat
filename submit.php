@@ -2,8 +2,14 @@
 
 if (isset($_POST['rm']) && isset($_POST['msg'])) {
 	
-	$room 		= $_POST['rm'];
-	$message 	= $_POST['msg'];
+	$before 	= $_POST['msg'];
+	
+	$room 		= filter_var($_POST['rm'], FILTER_SANITIZE_STRING);
+	$message 	= filter_var($_POST['msg'], FILTER_SANITIZE_STRING);
+	
+	if (str_replace(" ", "", $before) == "" || str_replace(" ", "", $message) == "") {
+		exit;
+	}
 	
 	$path		= "chats/{$room}/";
 	
