@@ -1,10 +1,12 @@
 html {
+	overflow-x:			hidden;
 	max-height:			100vh;
 	margin:				0px;
 	padding:			0px;
 }
 
 body {
+	overflow-x:			hidden;
 	Font-family: 		Century Gothic, CenturyGothic, AppleGothic, sans-serif;
 	background-color: 	#000;
 	color:				#fff;
@@ -17,13 +19,17 @@ body {
 	top:				0px;
 	height:				5vh;
 	width:				100%;
-	background-color:	#fff;
-	color:				#000;
+	background-color:	#2b2b2b;
+	color:				#696969;
 }
 
 h2 {
 	margin-top:			0px;
 	font-size:			2.5vh;
+}
+
+sub {
+	color: 				#3b3b3b;
 }
 
 .chatmessages {
@@ -46,7 +52,7 @@ h2 {
 	width:				100%;
 	bottom:				0px;
 	height:				5vh;
-	background-color:	#fff;
+	background-color:	#2b2b2b;
 	margin:				0px;
 }
 
@@ -78,35 +84,36 @@ h2 {
 	max-height:			5vh;
 	width:				100%;
 	border-width:		0px;
+	background-color:   #3b3b3b;
+	color:				#fff;
+	padding-left:		20px;
+	margin:				10px;
 }
 
 .chatlink {
-	margin:				0px;
-	padding:			0px;
+	padding:			0.5vh 0px 0px 0px;
 	width:				100%;
-	height:				100%;
 	display: 			block;
 	margin-left: 		auto;
 	margin-right: 		auto;
 	text-align: 		center;
 	font-size:			2.5vh;
-	transition-duration: 0.5s;
-	overflow:			hidden;
+	transition-duration: 0.2s;
+	vertical-align:		middle;
 }
 
 .chatlink:hover {
-	
+	padding:			0.5vh 0px 0px 5px;
 	cursor:				pointer;
-	background-color:   #000;
-	 text-shadow: -4px 4px #ef3550,
-               -8px 8px #f48fb1,
-               -12px 12px #7e57c2,
-               -16px 16px #2196f3,
-               -20px 20px #26c6da,
-               -24px 24px #43a047,
-               -28px 28px #eeff41,
-               -32px 32px #f9a825,
-               -36px 36px #ff5722;
+	 text-shadow: -4px 0px #ef3550,
+               -12px 0px #f48fb1,
+               -24px 0px #7e57c2,
+               -36px 0px #2196f3,
+               -48px 0px #26c6da,
+               -60px 0px #43a047,
+               -72px 0px #eeff41,
+               -84px 0px #f9a825,
+               -96px 0px #ff5722;
 }
 
 .center {
