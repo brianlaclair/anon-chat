@@ -5,9 +5,24 @@ body {
 	margin:				0px;
 }
 
+.topbar {
+	position:			absolute;
+	top:				0px;
+	height:				5vh;
+	width:				100%;
+	background-color:	#fff;
+	color:				#000;
+}
+
+h2 {
+	font-size:			100%;
+}
+
 .chatmessages {
-	//display: 			flex;
-	height:				90vh;
+	position: 			absolute;
+	width:				100%;
+	top:				5vh;
+	height:				85vh;
 	overflow-y:			scroll;
 	overflow-x:			hidden;
 	color:				#fff;

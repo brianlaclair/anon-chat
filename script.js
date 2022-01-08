@@ -1,5 +1,6 @@
 var input 		  	= document.getElementById("chatinput");
 var messages		= document.getElementById("messages");
+var counter			= document.getElementById("counter");
 var myCount			= check_message_count();
 
 // Press enter on input
@@ -18,6 +19,7 @@ function check_message_count() {
 			get_messages(myCount);
 		}
         myCount = returnedData;
+		counter.innerHTML = myCount + " messages all time";
 	});
 }
 
