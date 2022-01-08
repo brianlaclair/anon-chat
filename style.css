@@ -33,7 +33,7 @@ h2 {
 	width:				100%;
 	top:				5vh;
 	height:				85vh;
-	overflow-y:			scroll;
+	overflow-y:			hidden;
 	overflow-x:			hidden;
 	color:				#fff;
 	justify-content:	flex-end;
