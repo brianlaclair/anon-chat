@@ -1,5 +1,5 @@
 <?php
-require "eq.php";
+require 'vendor/autoload.php';
 
 eq_start("style.css", "https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js");
 
